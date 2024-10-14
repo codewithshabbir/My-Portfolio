@@ -1,0 +1,312 @@
+/* Example: Font Face Definition for Mondia */
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/Mondia.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaBlack.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaBlackItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaBold.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaBoldItalic.otf") format("opentype");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaExtraBlack.otf") format("opentype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaExtraBlackItalic.otf") format("opentype");
+  font-weight: 800;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaExtraBold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaExtraBoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaFat.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaFatItalic.otf") format("opentype");
+  font-weight: 900;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaItalic.otf") format("opentype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaLight.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaLightItalic.otf") format("opentype");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaMedium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaMediumItalic.otf") format("opentype");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaThin.otf") format("opentype");
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mondia";
+  src: url("path-to-fonts/MondiaThinItalic.otf") format("opentype");
+  font-weight: 100;
+  font-style: italic;
+}
+:root {
+  /* Primary Colors */
+  --primary-color: #5840ba; /* Purple */
+  --secondary-color: #F5F5F5;
+  --primary-color-light: #8f72ff; /* Light Purple */
+
+  /* Accent Colors */
+  --accent-color: #7cdd3e; /* Green */
+  --accent-color-light: #b3e67d; /* Light Green */
+
+  /* Neutral Colors */
+  --white: #ffffff; /* White */
+  --black: #000000; /* Black */
+  --gray-light: #f4f4f4; /* Light Gray */
+  --gray-dark: #333333; /* Dark Gray */
+
+  /* Background Colors */
+  --background-color: #f8f9fa; /* Light background */
+  --background-dark-color: #1c1e26; /* Dark background */
+
+  /* Typography Colors */
+  --text-color: #2b2b2b; /* Primary text color */
+  --text-light-color: #7f8c8d; /* Lighter text color */
+  --text-inverse-color: #ffffff; /* Inverse text color */
+
+  /* Border Colors */
+  --border-color: #5840ba; /* Light border color */
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: 1px solid var(--border-color);
+}
+
+button:hover {
+  background-color: var(--primary-color-light);
+}
+
+a {
+  color: var(--accent-color);
+}
+
+a:hover {
+  color: var(--accent-color-light);
+}
+
+.nav > ul > li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.17rem;
+  background-color: var(--border-color);
+  left: 0;
+  bottom: 0;
+  transform-origin: 0% 100%;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav > ul > li:hover::after {
+  transform: scaleX(1);
+}
+
+/* button animation */
+.button a {
+  color: white;
+}
+
+.button {
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.button > .anim-layer,
+.button-transparent > .anim-layer {
+  transition: width 0.3s ease, height 0.3s ease, top 0.3s ease, right 0.3s ease,
+    bottom 0.3s ease, left 0.3s ease;
+}
+
+.button:hover > .anim-layer {
+  width: 100%;
+  height: 100%;
+}
+.button:hover a {
+  color: #141214;
+}
+
+.hero-banner .image {
+  margin-top: -45px;
+}
+
+.hero-banner .image::before, .hero-banner .image::after {
+  content: "";
+  width: 400px;
+  position: absolute;
+  clip-path: polygon(
+    calc(100% - 28.5px) calc(100% - 0.90000000000001px),
+    32.2px calc(100% - 0.90000000000001px),
+    32.2px calc(100% - 0.90000000000001px),
+    26.973px calc(100% - 1.321px),
+    22.016px calc(100% - 2.54px),
+    17.395px calc(100% - 4.491px),
+    13.176px calc(100% - 7.108px),
+    9.425px calc(100% - 10.325px),
+    6.208px calc(100% - 14.076px),
+    3.591px calc(100% - 18.295px),
+    1.64px calc(100% - 22.916px),
+    0.421px calc(100% - 27.873px),
+    5.3248111102418e-31px calc(100% - 33.1px),
+    0px 87.4px,
+    0px 87.4px,
+    0.1942px 84.5609px,
+    0.7616px 81.8232px,
+    1.6794px 79.2163px,
+    2.9248px 76.7696px,
+    4.475px 74.5125px,
+    6.3072px 72.4744px,
+    8.3986px 70.6847px,
+    10.7264px 69.1728px,
+    13.2678px 67.9681px,
+    16px 67.1px,
+    calc(100% - 30.8px) 0.700002px,
+    calc(100% - 30.8px) 0.700002px,
+    calc(100% - 26.1225px) 0.019601458px,
+    calc(100% - 21.568px) 0.212801024px,
+    calc(100% - 17.2235px) 1.211200686px,
+    calc(100% - 13.176px) 2.946400432px,
+    calc(100% - 9.5125px) 5.35000025px,
+    calc(100% - 6.3200000000001px) 8.353600128px,
+    calc(100% - 3.6855px) 11.888800054px,
+    calc(100% - 1.696px) 15.887200016px,
+    calc(100% - 0.43850000000003px) 20.280400002px,
+    calc(100% - 5.6843418860808e-14px) 25px,
+    calc(100% - 0px) calc(100% - 29.4px),
+    calc(100% - 0px) calc(100% - 29.4px),
+    calc(100% - 0.37139999999999px) calc(100% - 24.7869px),
+    calc(100% - 1.4471999999999px) calc(100% - 20.4072px),
+    calc(100% - 3.1698px) calc(100% - 16.3203px),
+    calc(100% - 5.4816px) calc(100% - 12.5856px),
+    calc(100% - 8.325px) calc(100% - 9.2625px),
+    calc(100% - 11.6424px) calc(100% - 6.4104px),
+    calc(100% - 15.3762px) calc(100% - 4.0887px),
+    calc(100% - 19.4688px) calc(100% - 2.3568px),
+    calc(100% - 23.8626px) calc(100% - 1.2741px),
+    calc(100% - 28.5px) calc(100% - 0.90000000000001px)
+  );
+  z-index: 1;
+}
+
+.hero-banner .image::before{
+  height: 190px;
+  background-color: var(--primary-color);
+  bottom: 0px;
+  left: 0;
+  rotate: 270deg;
+
+}
+
+.hero-banner .image::after {
+  height: 190px;
+  background-color: var(--secondary-color);
+  bottom: -50px;
+  right: 0;
+  rotate: 270deg;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+
+}
+
+.button-transparent:hover > .anim-layer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+.button-transparent:hover {
+  border-color: var(--primary-color);
+}
+.button-transparent:hover a {
+  color: white;
+}
